@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wonderful Home</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="{{ url_for('homepage') }}">Home</a></li>
+            <li><a href="{{ url_for('about_page') }}">About</a></li>
+            <li><a href="{{ url_for('consultation_page') }}">Consultations</a></li>
+            <li><a href="{{ url_for('services_page') }}">Services</a></li>
+            <li><a href="{{ url_for('gallery_page') }}">Gallery</a></li>
+            <li><a href="{{ url_for('contact_page') }}">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Welcome to The Wonderful Home</h1>
+    </header>
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer>
+        <p>&copy; The Wonderful Home EST 2015</p>
+    </footer>
+</body>
+</html>
