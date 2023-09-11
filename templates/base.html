@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Wonderful Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
+
 <body>
     <nav class="navbar">
         <ul class="nav-list">
@@ -18,7 +32,7 @@
     </nav>
 
     <header>
-        <h1>Welcome to The Wonderful Home</h1>
+  
     </header>
 
     <div class="content">
@@ -29,4 +43,5 @@
         <p>&copy; The Wonderful Home EST 2015</p>
     </footer>
 </body>
+
 </html>
