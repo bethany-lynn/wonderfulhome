@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beans Love Beers</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
-</head>
+{% extends 'base.html' %}
 
-<body>
-  <div class="bg-green-custom px-3 py-1 custom-bg">
+
+{% block content %}
+  <div class="bg-green-300 px-3 py-1">
     <h2 class="text-3xl font-light text-white-custom m-0 custom-text">Beans Love Beers</h2>
   </div>
   <!-- Search Bar -->
@@ -83,6 +76,5 @@
     </div>
   </div>
 
-</body>
-
-</html>
+  
+  {% endblock %}
