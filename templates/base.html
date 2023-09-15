@@ -25,7 +25,7 @@
     </nav>
 
     <header>
-  
+
     </header>
 
     <div class="content">
@@ -34,9 +34,25 @@
         {% endblock %}
     </div>
 
-    <footer>
-        <p>&copy; The Wonderful Home EST 2015</p>
+    <footer class="bg-gray-900 text-white py-4">
+        <div class="container mx-auto flex flex-col lg:flex-row justify-between items-center">
+            <div class="text-center lg:text-left mb-2 lg:mb-0">
+                <p class="text-sm">&copy; The Wonderful Home EST 2015</p>
+            </div>
+            <div class="flex space-x-4 ml-auto">
+                <a href="#" class="hover:text-gray-600 transition">
+                    <img src="{{ url_for('static', filename='images/facebook.png') }}" alt="Facebook" class="w-6 h-6" />
+                </a>
+                <a href="#" class="hover:text-gray-600 transition">
+                    <img src="{{ url_for('static', filename='images/instagram.png') }}" alt="Instagram" class="w-6 h-6" />
+                </a>
+                <a href="#" class="hover:text-gray-600 transition">
+                    <img src="{{ url_for('static', filename='images/youtube.png') }}" alt="YouTube" class="w-6 h-6" />
+                </a>
+            </div>
+        </div>
     </footer>
+
 </body>
 
 </html>
