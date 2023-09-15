@@ -28,6 +28,11 @@ def services_page():
     # and button to contact for more detailed pricing
     return render_template('services.html')
 
+@app.route('/reviews')
+def reviews_page():
+    """Reviews and blurbs from previous clients"""
+    return render_template('reviews.html')
+
 @app.route('/gallery')
 def gallery_page():
     """Images of previous work done"""
