@@ -1,11 +1,25 @@
 <nav class="navbar">
-    <ul class="nav-list">
-        <li><a href="{{ url_for('homepage') }}">Home</a></li>
-        <li><a href="{{ url_for('about_page') }}">About</a></li>
-        <li><a href="{{ url_for('consultation_page') }}">Consultations</a></li>
-        <li><a href="{{ url_for('services_page') }}">Services</a></li>
-        <li><a href="{{ url_for('reviews_page') }}">Reviews</a></li>
-        <li><a href="{{ url_for('gallery_page') }}">Gallery</a></li>
-        <li><a href="{{ url_for('contact_page') }}">Contact</a></li>
-    </ul>
+    <div class="relative inline-block text-left">
+        <button class="bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600" id="menu-button">
+            Menu
+        </button>
+        <ul class="hidden absolute left-0 mt-2 bg-white border rounded-md shadow-lg z-50" id="menu">
+            <li><a href="{{ url_for('homepage') }}" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Home</a></li>
+            <li><a href="{{ url_for('about_page') }}" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">About</a></li>
+            <li><a href="{{ url_for('consultation_page') }}" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Consultations</a></li>
+            <li><a href="{{ url_for('services_page') }}" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Services</a></li>
+            <li><a href="{{ url_for('reviews_page') }}" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Reviews</a></li>
+            <li><a href="{{ url_for('gallery_page') }}" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Gallery</a></li>
+            <li><a href="{{ url_for('contact_page') }}" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Contact</a></li>
+        </ul>
+    </div>
 </nav>
+
+<script>
+    const menuButton = document.getElementById("menu-button");
+    const menu = document.getElementById("menu");
+
+    menuButton.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+    });
+</script>

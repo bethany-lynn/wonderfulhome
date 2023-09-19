@@ -1,6 +1,7 @@
-from flask import Flask, render_template
-from jinja2 import StrictUndefined
-from model import *
+from flask import Flask, render_template;
+from jinja2 import StrictUndefined;
+from model import *;
+# import './static/css/main.css';
 
 app = Flask(__name__)
 app.secret_key = "dev"
