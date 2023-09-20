@@ -11,20 +11,24 @@
     {% block css %}{% endblock %}
 </head>
 
-<body>
+<body class="flex flex-col min-h-screen">
 
     <header>
         {% include 'navbar.html' %}
     </header>
 
-    <div class="content">
+    <div class="flex-grow">
         {% block content %}
 
         {% endblock %}
     </div>
 
+    <footer>
+        {% include 'footer.html' %}
+    </footer>
 
-    {% include 'footer.html' %}
+
+
 
 
 </body>
