@@ -1,24 +1,23 @@
+// @type {import('tailwindcss').Config} 
+
 module.exports = {
     purge: [
-        './templates/**/*.html',
+      './templates/**/*.html',
     ],
     theme: {
-        extend: {},
+      extend: {
+        fontFamily: {
+          serif: ['Georgia', 'serif'],
+          sans: ['Arial', 'sans'],
+          monospace: ['Courier New', 'monospace'],
+          cursive: ['Dancing Script', 'cursive'],
+        },
+      },
     },
     variants: {},
-    plugins: [],
-    extend: {
-        theme: {
-            transitionProperty: {
-                'opacity': 'opacity',
-            },
-            transitionDuration: {
-                '700': '700ms',
-                '1000': '1000ms', 
-            },
-            transitionTimingFunction: {
-                'ease-in-out': 'ease-in-out',
-            },
-        },
-    },
-};
+    plugins: [
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/typography'),
+    ],
+  };
+  

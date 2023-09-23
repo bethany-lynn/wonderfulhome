@@ -9,6 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "tw-elements": "^1.0.0"
+  },
+  "devDependencies": {
     "tailwindcss": "^3.3.3"
   }
 }
