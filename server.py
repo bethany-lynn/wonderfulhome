@@ -32,7 +32,7 @@ def services_page():
 @app.route('/reviews')
 def reviews_page():
     """Reviews and blurbs from previous clients"""
-    return render_template('testing.html')
+    return render_template('reviews.html')
 
 @app.route('/gallery')
 def gallery_page():

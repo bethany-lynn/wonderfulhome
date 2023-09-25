@@ -6,10 +6,6 @@
 				position: static;
 				opacity: 80;
 			}
-			/* .carousel-item {
-				-webkit-transition: opacity 0.9s ease-out;
-				transition: opacity 0.9s ease-out;
-			} */
 			#carousel-1:checked ~ .control-1,
 			#carousel-2:checked ~ .control-2,
 			#carousel-3:checked ~ .control-3 {
@@ -45,10 +41,10 @@
 			<div class="block h-full w-full bg-slate-700 text-black text-5xl text-center">1</div>
 		</div>
 		<label for="carousel-3" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl 
-      font-bold text-black hover:text-white rounded-full  leading-tight text-center z-10 
+      font-bold text-black hover:text-white rounded-full  leading-tight text-center z-5 
       inset-y-0 left-0 my-auto">‹</label>
 		<label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl 
-      font-bold text-black hover:text-white rounded-full  leading-tight text-center z-10 
+      font-bold text-black hover:text-white rounded-full  leading-tight text-center z-5 
       inset-y-0 right-0 my-auto">›</label>
 		
 		<!--Slide 2-->
@@ -57,10 +53,10 @@
 			<div class="block h-full w-full bg-slate-700 text-black text-5xl text-center">2</div>
 		</div>
 		<label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl 
-      font-bold text-black hover:text-white rounded-full  leading-tight text-center z-10 
+      font-bold text-black hover:text-white rounded-full  leading-tight text-center z-5 
       inset-y-0 left-0 my-auto">‹</label>
 		<label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl 
-      font-bold text-black hover:text-white rounded-full  leading-tight text-center z-10 
+      font-bold text-black hover:text-white rounded-full  leading-tight text-center z-5 
       inset-y-0 right-0 my-auto">›</label> 
 		
 		<!--Slide 3-->
@@ -69,10 +65,10 @@
 			<div class="block h-full w-full bg-slate-700 text-black text-5xl text-center">3</div>
 		</div>
 		<label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl 
-      font-bold text-black hover:text-white rounded-full  leading-tight text-center z-10 
+      font-bold text-black hover:text-white rounded-full  leading-tight text-center z-5 
       inset-y-0 left-0 my-auto">‹</label>
 		<label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl 
-      font-bold text-black hover:text-white rounded-full  leading-tight text-center z-10 
+      font-bold text-black hover:text-white rounded-full  leading-tight text-center z-5 
       inset-y-0 right-0 my-auto">›</label>
 
 		<!-- Add additional indicators for each slide-->
@@ -100,7 +96,6 @@
 
 
 
-
 <!--   oold index.html below
   <div class="bg-green-300 px-3 py-1">
     <h2 class="text-3xl font-light text-white-custom m-0 custom-text">The Wonderful Home</h2>
@@ -109,6 +104,13 @@
 
 
 <!-- 
+
+  .carousel-item {
+  -webkit-transition: opacity 0.9s ease-out;
+  transition: opacity 0.9s ease-out;
+} 
+
+
     Search Bar
       <div class="container">
     <input type="text" placeholder="Search for stuff - probably don't need this..."

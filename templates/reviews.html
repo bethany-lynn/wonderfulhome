@@ -1,19 +1,149 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+<style>
+    .carousel-open:checked+.carousel-item {
+        position: static;
+        opacity: 80;
+    }
+
+    #carousel-1:checked~.control-1,
+    #carousel-2:checked~.control-2,
+    #carousel-3:checked~.control-3 {
+        display: block;
+    }
+
+    .carousel-indicators {
+        list-style: none;
+        margin: 0;
+        padding: 10;
+        position: absolute;
+        bottom: 2%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        z-index: 10;
+    }
+
+    #carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+    #carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+    #carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
+        color: #181c18;
+    }
+</style>
+
 <main>
-    <div class="mx-24 p-2 border-double border-4 border-stone-700" id="border">
-      <section class="relative isolate overflow-hidden px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl lg:max-w-4xl py-42 sm:py-56">
-            <!-- <figure class="mt-5"></figure> -->
-            <img src="https://images.unsplash.com/photo-1604762511431-6280a12cb835?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
-                alt="image of a couch in living room" class="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center" id="review_image">
-                <blockquote class="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9" id="review_words">
-                    <p>“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente
+    <div class="carousel relative mx-10 p-2 border-double border-4 border-stone-700" id="border">
+        <section class="relative isolate overflow-hidden px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl lg:max-w-4xl py-42 sm:py-56">
+                <!-- <figure class="mt-5"></figure> -->
+
+                <img src="https://images.unsplash.com/photo-1604762511431-6280a12cb835?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
+                    alt="image of a couch in living room"
+                    class="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center opacity-50"
+                    id="review_image">
+
+                <!-- slice 1 -->
+                <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden=""checked="checked">
+                <div class="carousel-item absolute opacity-0 flex justify-center items-center" style="height:50vh;">
+                    <div class="block text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
+                        <blockquote
+                            class="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9"
+                            id="review_words">
+                            <p>“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa
+                                sapiente
+                                alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”</p>
+                        </blockquote>
+                        <figcaption class="mt-10" id="icon_and_name">
+                            <!-- svg space -->
+                            <div class="mt-4 flex items-center justify-center space-x-3 text-base" id="client_name">
+                                <div class="font-semibold text-gray-900">Bee Bear</div>
+                            </div>
+                        </figcaption>
+                    </div>
+                </div>
+                <label for="carousel-3" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl 
+              font-bold text-black hover:text-white rounded-full  leading-tight text-center z-5 
+              inset-y-0 left-0 my-auto">‹</label>
+                <label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl 
+              font-bold text-black hover:text-white rounded-full  leading-tight text-center z-5 
+              inset-y-0 right-0 my-auto">›</label>
+
+                <!-- slide 2 -->
+                <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+                <div class="carousel-item absolute opacity-0 flex justify-center items-center" style="height:50vh;">
+                    <div class="block text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
+                        <blockquote
+                        class="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9"
+                        id="review_words">
+                        <p>“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa
+                            sapiente
+                            alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”</p>
+                    </blockquote>
+                    <figcaption class="mt-10" id="icon_and_name">
+                        <!-- svg space -->
+                        <div class="mt-4 flex items-center justify-center space-x-3 text-base" id="client_name">
+                            <div class="font-semibold text-gray-900">Bee Bear 2</div>
+                        </div>
+                    </figcaption>
+                    </div>
+                </div>
+                <label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl 
+              font-bold text-black hover:text-white rounded-full  leading-tight text-center z-5 
+              inset-y-0 left-0 my-auto">‹</label>
+                <label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl 
+              font-bold text-black hover:text-white rounded-full  leading-tight text-center z-5 
+              inset-y-0 right-0 my-auto">›</label> 
+
+              <!-- slide 3 -->
+              <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+              <div class="carousel-item absolute opacity-0 flex justify-center items-center" style="height:50vh;">
+                  <div class="block text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
+                    <blockquote
+                    class="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9"
+                    id="review_words">
+                    <p>“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa
+                        sapiente
                         alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”</p>
                 </blockquote>
                 <figcaption class="mt-10" id="icon_and_name">
-                    <svg class="mx-auto h-10 w-10 rounded-full" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                    <!-- svg space -->
+                    <div class="mt-4 flex items-center justify-center space-x-3 text-base" id="client_name">
+                        <div class="font-semibold text-gray-900">Bee Bear 3</div>
+                    </div>
+                </figcaption>
+                  </div>
+              </div>
+              <label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl 
+            font-bold text-black hover:text-white rounded-full  leading-tight text-center z-5 
+            inset-y-0 left-0 my-auto">‹</label>
+              <label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl 
+            font-bold text-black hover:text-white rounded-full  leading-tight text-center z-5 
+            inset-y-0 right-0 my-auto">›</label>
+
+            		<!-- Add additional indicators for each slide-->
+		<ol class="carousel-indicators">
+			<li class="inline-block mr-3">
+				<label for="carousel-1" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-slate-700">•</label>
+			</li>
+			<li class="inline-block mr-3">
+				<label for="carousel-2" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-slate-700">•</label>
+			</li>
+			<li class="inline-block mr-3">
+				<label for="carousel-3" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-slate-700">•</label>
+			</li>
+		</ol>
+
+        
+            </div>
+        </section>
+    </div>
+
+</main>
+{% endblock %}
+
+<!--                     <svg class="mx-auto h-10 w-10 rounded-full" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" alt="heart icon">
                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -29,15 +159,4 @@
                                 </mask>
                                 <use fill="#000000" fill-rule="nonzero" xlink:href="#heart-c"></use>
                                 <g fill="#343027" mask="url(#heart-d)"> <rect width="24" height="24" transform="translate(-1 -2)"></rect></g></g></g>
-                    </svg>
-                    <div class="mt-4 flex items-center justify-center space-x-3 text-base" id="client_name">
-                        <div class="font-semibold text-gray-900">Bee Bear</div>
-                    </div>
-                </figcaption>
-            </figure>
-        </div>
-    </section>
-</div>
-
-</main>
-{% endblock %}
+                    </svg> -->
