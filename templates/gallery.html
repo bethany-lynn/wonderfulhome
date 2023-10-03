@@ -87,6 +87,7 @@
     const kitchensModal = document.getElementById('kitchenModal');
     const modalContent = kitchensModal.querySelector('.modal-content');
 
+    // kithcens:
     // Function to open the modal
     function openKitchensModal() {
         // Fetch the content from the Flask route
@@ -98,24 +99,17 @@
             });
     }
 
-
-    // Function to close the modal
-    // function closeKitchensModal() {
-    //     kitchensModal.classList.add('hidden');
-    // }
-
-    // Event listeners for opening and closing the modal
+    // Event listeners for opening modal
     kitchensButton.addEventListener('click', openKitchensModal);
-    kitchensModal.addEventListener('click', function (event) {
-        if (event.target === kitchensModal) {
-            closeKitchensModal();
-        }
-    });
 
-    // Function to close with the button
-    // document.getElementById('closeModal').addEventListener('click', function () {
-    //     closeKitchensModal();
+    // event listener to close modal
+    // kitchensModal.addEventListener('click', function (event) {
+    //     if (event.target === kitchensModal) {
+    //         closeKitchensModal();
+    //     }
     // });
+
+
 </script>
 
 {% endblock %}
