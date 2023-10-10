@@ -78,25 +78,26 @@
                         alt="">
                 </div>
             </div>
-            <button class="mt-4 px-4 py-2 bg-stone-500 text-white rounded hover:bg-stone-600 transition duration-300"
-                id="closingModal">CLOSE</button>
+            <a href="gallery" class="mt-4 px-4 py-2 bg-stone-500 text-white rounded hover:bg-stone-600 transition duration-300 text-black">
+                Close Gallery
+            </a>
         </div>
     </main>
+    <!-- <script>
+        const closeGalleryModalButton = document.getElementById('closeGalleryModal');
+        const kitchenModal = document.getElementById('kitchenModal'); // Removed 'parent.document' here
+    
+        // Function to close the modal
+        function closeGalleryModal() {
+            kitchenModal.classList.add('hidden');
+        }
+    
+        // Event listener to close the modal
+        closeGalleryModalButton.addEventListener('click', closeGalleryModal);
+    </script> -->
+    
+    
 
-
-    <script>
-        console.log('JavaScript is working.');
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const closeModalButton = document.getElementById('closingModal');
-
-            closeModalButton.addEventListener('click', function () {
-                console.log('clicked button');
-                window.location.href = 'gallery.html';
-            });
-        });
-
-    </script>
 </body>
 
 </html>

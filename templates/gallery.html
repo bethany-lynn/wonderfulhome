@@ -3,6 +3,7 @@
 {% block content %}
 <main>
     <div class="container p-10 mx-auto flex flex-wrap">
+        <!-- begin kitchens -->
         <div class="lg:w-1/3 md:w 1/2 w-full p-2">
             <div class="p-8 rounded-xl border border-stone-300 hover:shadow-md bg-stone-100 flex flex-col items-center">
                 <img class="mb-4 shadow-md mx-auto md:h-64 md:w-64 h-40 w-40 rounded full" alt="image of service"
@@ -11,9 +12,20 @@
                 <p class="text-base text-center">kitchen description and stuff</p>
                 <button
                     class="mt-2 px-4 py-2 bg-stone-500 text-white rounded hover:bg-stone-600 transition duration-300"
-                    id="kitchen_button">see more</button>
+                    id="kitchen_button">see more
+                </button>
             </div>
         </div>
+        <div id="kitchenModal" class="fixed inset-0 z-50 flex items-center justify-center hidden">
+            <div class="modal-overlay fixed inset-0 bg-black opacity-50"></div>
+            <div class="modal-container bg-white w-11/12 md:max-w-4xl h-120 mx-auto rounded shadow-lg z-50 overflow-y-auto">
+                <div class="modal-content p-4">
+                    <h2 class="text-xl font-semibold mb-4">Kitchens</h2>
+                    <button class="mt-4 px-4 py-2 bg-stone-500 text-white rounded hover:bg-stone-600 transition duration-300 text-black" id="closeModal">CLOSE THIS TAB</button>
+                </div>
+            </div>
+        </div>
+        <!-- end kitchens -->
         <div class="lg:w-1/3 md:w 1/2 w-full p-2">
             <div class="p-8 rounded-xl border border-stone-300 hover:shadow-md bg-stone-100 flex flex-col items-center">
                 <img class="mb-4 shadow-md mx-auto md:h-64 md:w-64 h-40 w-40 rounded full" alt="image of service"
@@ -69,15 +81,6 @@
                     id="pantries_button">see more</button>
             </div>
         </div>
-        <div id="kitchenModal" class="fixed inset-0 z-50 flex items-center justify-center hidden">
-            <div class="modal-overlay fixed inset-0 bg-black opacity-50"></div>
-            <div class="modal-container bg-white w-11/12 md:max-w-4xl h-120 mx-auto rounded shadow-lg z-50 overflow-y-auto">
-                <div class="modal-content p-4">
-                    <h2 class="text-xl font-semibold mb-4">Kitchens</h2>
-                    <button class="mt-4 px-4 py-2 bg-stone-500 text-white rounded hover:bg-stone-600 transition duration-300 text-black" id="closeModal">CLOSE THIS TAB</button>
-                </div>
-            </div>
-        </div>
     </div>
 </main>
 
@@ -86,8 +89,8 @@
     const kitchensButton = document.getElementById('kitchen_button');
     const kitchensModal = document.getElementById('kitchenModal');
     const modalContent = kitchensModal.querySelector('.modal-content');
+    const closeModalButton = document.getElementById('closeModal');
 
-    // kithcens:
     // Function to open the modal
     function openKitchensModal() {
         // Fetch the content from the Flask route
@@ -99,17 +102,13 @@
             });
     }
 
-    // Event listeners for opening modal
+    // Event listener for opening modal
     kitchensButton.addEventListener('click', openKitchensModal);
 
-    // event listener to close modal
-    // kitchensModal.addEventListener('click', function (event) {
-    //     if (event.target === kitchensModal) {
-    //         closeKitchensModal();
-    //     }
+    // Event listener to close modal
+    // closeModalButton.addEventListener('click', () => {
+    //     kitchensModal.classList.add('hidden');
     // });
-
-
 </script>
 
 {% endblock %}
