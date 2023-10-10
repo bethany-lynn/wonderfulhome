@@ -48,6 +48,13 @@ def kitchen_page():
     """Show gallery of kitchen images"""
     return render_template('kitchens.html')
 
+@app.route('/templates/<gallery_name>.html')
+def get_gallery_template(gallery_name):
+    """Show gallery of relevant button clicked """
+    return render_template(f'{gallery_name}.html')
+
+
+
 if __name__ == "__main__":
     connect_to_db(app)
     app.run(host="0.0.0.0", debug=True)
