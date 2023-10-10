@@ -48,6 +48,31 @@ def kitchen_page():
     """Show gallery of kitchen images"""
     return render_template('kitchens.html')
 
+@app.route('/bathrooms')
+def bathroom_page():
+    """Show gallery of bathroom images"""
+    return render_template('bathrooms.html')
+
+@app.route('/exteriors')
+def exterior_page():
+    """Show gallery of kitchen images"""
+    return render_template('exteriors.html')
+
+@app.route('/dining')
+def dining_page():
+    """Show gallery of dining, living, and entertainment images"""
+    return render_template('dining.html')
+
+@app.route('/bedrooms')
+def bedroom_page():
+    """Show gallery of bedroom images"""
+    return render_template('bedrooms.html')
+
+@app.route('/pantries')
+def pantry_page():
+    """Show gallery of pantry and custom organization images"""
+    return render_template('pantries.html')
+
 @app.route('/templates/<gallery_name>.html')
 def get_gallery_template(gallery_name):
     """Show gallery of relevant button clicked """
