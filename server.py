@@ -26,10 +26,10 @@ def services_page():
     """List of services and prices"""
     return render_template('services.html')
 
-@app.route('/reviews')
-def reviews_page():
-    """Reviews and blurbs from previous clients"""
-    return render_template('reviews.html')
+# @app.route('/reviews')
+# def reviews_page():
+#     """Reviews and blurbs from previous clients"""
+#     return render_template('reviews.html')
 
 @app.route('/gallery')
 def gallery_page():
