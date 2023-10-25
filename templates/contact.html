@@ -165,7 +165,8 @@
                         <label for="email" class="mb-3 block text-base font-medium text-slate-800">
                             Email Address
                         </label>
-                        <input type="email" name="email" id="email" placeholder="example@domain.com"
+                        <input type="email" name="email" id="email" placeholder="example@email.com"
+                            required
                             class="w-full md:w-96 rounded-md border border-stone-700 bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-zinc-700 focus:shadow-md" />
                     </div>
                     <div class="mb-5">
@@ -198,7 +199,7 @@
 <script>
 
     const phoneNumberInput = document.getElementById("phone_number_input");
-    
+
     phoneNumberInput.addEventListener("input", function () {
       const phoneNumber = phoneNumberInput.value.replace(/\D/g, "");
       if (phoneNumber.length === 0) {
