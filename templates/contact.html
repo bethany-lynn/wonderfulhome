@@ -46,6 +46,7 @@
                     class="h-full w-full object-cover object-right md:object-center" alt="dog laying on couch"
                     id="dog_couch_image">
             </div>
+
             <div class="col2 w-1/2">
                 <div class="flex items-center justify-center p-12">
                     <div class="mx-auto w-full max-w-[550px]">
@@ -205,136 +206,173 @@
     </div> -->
 
 
-<!--  -->
-    <div class="flex justify-center items-center">
+    <!--  -->
+    <div class="flex justify-center">
         <div class="grid grid-rows-3 grid-flow-col gap-4">
 
             <div class="row-span-2">
-                <div class="border-double border-4 border-stone-700">
-                    <img src="https://images.unsplash.com/photo-1637531716431-6d76ee470c9c?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fGRvZyUyMG9uJTIwY291Y2h8ZW58MHx8MHx8fDA%3D"
-                        class="h-full w-full object-cover object-right md:object-center" alt="dog laying on couch"
-                        id="dog_couch_image">
+                <div class="dog_image border-double border-4 border-stone-700 w-96 h-96">
+                    <section class="relative isolate overflow-hidden px-6 lg:px-8 h-full w-full">
+                        <div class="sizes mx-auto max-w-2xl lg:max-w-2xl py-10 sm:py-20">
+                            <img src="https://images.unsplash.com/photo-1561039188-63839a5bb5a6?auto=format&fit=crop&q=80&w=3072&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="dog on couch"
+                                class="absolute inset-0 -z-10 w-full h-full object-cover object-center md:object-center">
+                        </div>
+                    </section>
                 </div>
             </div>
-<!--  -->
+            
+
+
             <div class="row-span-1">
-                    <div class="carousel border-double border-4 border-stone-700">
-                        <section class="relative isolate overflow-hidden px-6 lg:px-8">
-                            <div class="sizes mx-auto max-w-2xl lg:max-w-2xl py-10 sm:py-20">
-        
-                                <img src="https://images.unsplash.com/photo-1604762511431-6280a12cb835?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
-                                    alt="image of a couch in living room"
-                                    class="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center opacity-50"
-                                    id="review_image">
-        
-                                <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true"
-                                    hidden="" checked="checked">
-                                <div class="carousel-item absolute opacity-0 flex justify-center items-center"
-                                    style="height:5vh;">
-                                    <div
-                                        class="block text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
-                                        <blockquote
-                                            class="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9"
-                                            id="review_words">
-                                            <p>“Review ONE”</p>
-                                        </blockquote>
-                                        <figcaption class="mt-10" id="icon_and_name">
-                                            <div class="mt-4 flex items-center justify-center space-x-3 text-base"
-                                                id="client_name">
-                                                <div class="font-semibold text-gray-900">Bee Bear</div>
-                                            </div>
-                                        </figcaption>
-                                    </div>
+                <div class="carousel border-double border-4 border-stone-700">
+                    <section class="relative isolate overflow-hidden px-6 lg:px-8">
+                        <div class="sizes mx-auto max-w-2xl lg:max-w-2xl py-10 sm:py-20">
+                            <img src="https://images.unsplash.com/photo-1604762511431-6280a12cb835?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
+                                alt="image of a monstera in pot"
+                                class="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center opacity-50"
+                                id="review-image">
+
+                            <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true"
+                                hidden="" checked="checked">
+                            <div class="carousel-item absolute opacity-0 flex justify-center items-center"
+                                style="height:5vh;">
+                                <div
+                                    class="block text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
+                                    <blockquote
+                                        class="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9"
+                                        id="review_words">
+                                        <p>“Review ONE”</p>
+                                    </blockquote>
+                                    <figcaption class="mt-10" id="icon_and_name">
+                                        <div class="mt-4 flex items-center justify-center space-x-3 text-base"
+                                            id="client_name">
+                                            <div class="font-semibold text-gray-900">Bee Bear</div>
+                                        </div>
+                                    </figcaption>
                                 </div>
-                                <label for="carousel-3" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl 
+                            </div>
+                            <label for="carousel-3" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl 
                                   font-bold text-black hover:text-white rounded-full  leading-tight text-center z-5 
                                   inset-y-0 left-0 my-auto">‹</label>
-                                <label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl 
+                            <label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl 
                                   font-bold text-black hover:text-white rounded-full  leading-tight text-center z-5 
                                   inset-y-0 right-0 my-auto">›</label>
-        
-                                <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true"
-                                    hidden="">
-                                <div class="carousel-item absolute opacity-0 flex justify-center items-center"
-                                    style="height:5vh;">
-                                    <div
-                                        class="block text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
-                                        <blockquote
-                                            class="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9"
-                                            id="review_words">
-                                            <p>“Review TWO”</p>
-                                        </blockquote>
-                                        <figcaption class="mt-10" id="icon_and_name">
-                                            
-                                            <div class="mt-4 flex items-center justify-center space-x-3 text-base"
-                                                id="client_name">
-                                                <div class="font-semibold text-gray-900">Bee Bear 2</div>
-                                            </div>
-                                        </figcaption>
-                                    </div>
+
+                            <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true"
+                                hidden="">
+                            <div class="carousel-item absolute opacity-0 flex justify-center items-center"
+                                style="height:5vh;">
+                                <div
+                                    class="block text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
+                                    <blockquote
+                                        class="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9"
+                                        id="review_words">
+                                        <p>“Review TWO”</p>
+                                    </blockquote>
+                                    <figcaption class="mt-10" id="icon_and_name">
+
+                                        <div class="mt-4 flex items-center justify-center space-x-3 text-base"
+                                            id="client_name">
+                                            <div class="font-semibold text-gray-900">Bee Bear 2</div>
+                                        </div>
+                                    </figcaption>
                                 </div>
-                                <label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl 
-                                    font-bold text-black hover:text-white rounded-full  leading-tight text-center z-5 
-                                    inset-y-0 left-0 my-auto">‹</label>
-                                <label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl 
-                                    font-bold text-black hover:text-white rounded-full  leading-tight text-center z-5 
-                                    inset-y-0 right-0 my-auto">›</label>
-        
-                                <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true"
-                                    hidden="">
-                                <div class="carousel-item absolute opacity-0 flex justify-center items-center"
-                                    style="height:5vh;">
-                                    <div
-                                        class="block text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
-                                        <blockquote
-                                            class="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9"
-                                            id="review_words">
-                                            <p>“Rewiew THREE”</p>
-                                        </blockquote>
-                                        <figcaption class="mt-10" id="icon_and_name">
-                                         
-                                            <div class="mt-4 flex items-center justify-center space-x-3 text-base"
-                                                id="client_name">
-                                                <div class="font-semibold text-gray-900">Bee Bear 3</div>
-                                            </div>
-                                        </figcaption>
-                                    </div>
-                                </div>
-                                <label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl 
-                                    font-bold text-black hover:text-white rounded-full  leading-tight text-center z-5 
-                                    inset-y-0 left-0 my-auto">‹</label>
-                                <label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl 
-                                    font-bold text-black hover:text-white rounded-full  leading-tight text-center z-5 
-                                    inset-y-0 right-0 my-auto">›</label>
-        
-                                <ol class="carousel-indicators">
-                                    <li class="inline-block mr-3">
-                                        <label for="carousel-1"
-                                            class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-slate-700">•</label>
-                                    </li>
-                                    <li class="inline-block mr-3">
-                                        <label for="carousel-2"
-                                            class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-slate-700">•</label>
-                                    </li>
-                                    <li class="inline-block mr-3">
-                                        <label for="carousel-3"
-                                            class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-slate-700">•</label>
-                                    </li>
-                                </ol>
                             </div>
-                        </section>
+                            <label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl 
+                                    font-bold text-black hover:text-white rounded-full  leading-tight text-center z-5 
+                                    inset-y-0 left-0 my-auto">‹</label>
+                            <label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl 
+                                    font-bold text-black hover:text-white rounded-full  leading-tight text-center z-5 
+                                    inset-y-0 right-0 my-auto">›</label>
+
+                            <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true"
+                                hidden="">
+                            <div class="carousel-item absolute opacity-0 flex justify-center items-center"
+                                style="height:5vh;">
+                                <div
+                                    class="block text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
+                                    <blockquote
+                                        class="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9"
+                                        id="review_words">
+                                        <p>“Rewiew THREE”</p>
+                                    </blockquote>
+                                    <figcaption class="mt-10" id="icon_and_name">
+
+                                        <div class="mt-4 flex items-center justify-center space-x-3 text-base"
+                                            id="client_name">
+                                            <div class="font-semibold text-gray-900">Bee Bear 3</div>
+                                        </div>
+                                    </figcaption>
+                                </div>
+                            </div>
+                            <label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl 
+                                    font-bold text-black hover:text-white rounded-full  leading-tight text-center z-5 
+                                    inset-y-0 left-0 my-auto">‹</label>
+                            <label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl 
+                                    font-bold text-black hover:text-white rounded-full  leading-tight text-center z-5 
+                                    inset-y-0 right-0 my-auto">›</label>
+
+                            <ol class="carousel-indicators">
+                                <li class="inline-block mr-3">
+                                    <label for="carousel-1"
+                                        class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-slate-700">•</label>
+                                </li>
+                                <li class="inline-block mr-3">
+                                    <label for="carousel-2"
+                                        class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-slate-700">•</label>
+                                </li>
+                                <li class="inline-block mr-3">
+                                    <label for="carousel-3"
+                                        class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-slate-700">•</label>
+                                </li>
+                            </ol>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            
+            <div class="row-span-3">
+                <form action="https://formbold.com/s/FORM_ID" method="POST">
+                    <div class="mb-5">
+                        <label for="name" class="mb-3 block text-base font-medium text-slate-800">
+                            Full Name
+                        </label>
+                        <input type="text" name="name" id="name" placeholder="Full Name"
+                            class="w-full rounded-md border border-stone-700 bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-zinc-700 focus:shadow-md" />
                     </div>
+                    <div class="mb-5">
+                        <label for="email" class="mb-3 block text-base font-medium text-slate-800">
+                            Email Address
+                        </label>
+                        <input type="email" name="email" id="email" placeholder="example@domain.com"
+                            class="w-full rounded-md border border-stone-700 bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-zinc-700 focus:shadow-md" />
+                    </div>
+                    <div class="mb-5">
+                        <label for="phone_number" class="mb-3 block text-base font-medium text-slate-800">
+                            Phone Number
+                        </label>
+                        <input type="text" name="phone_number" id="phone_number" placeholder="Enter your phone_number"
+                            class="w-full rounded-md border border-stone-700 bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-zinc-700 focus:shadow-md" />
+                    </div>
+                    <div class="mb-5">
+                        <label for="message" class="mb-3 block text-base font-medium text-slate-800">
+                            Message
+                        </label>
+                        <textarea rows="3" name="message" id="message" placeholder="Type your message"
+                            class="w-full resize-none rounded-md border border-stone-700 bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-zinc-700 focus:shadow-md"></textarea>
+                    </div>
+                    <div>
+                        <button
+                            class="hover:shadow-form rounded-md bg-gray-700 hover:bg py-3 px-8 text-base font-semibold text-white outline-none">
+                            Submit
+                        </button>
+                    </div>
+                </form>
             </div>
-<!--  -->
-            <div class="row-span-3 col-span-2">
-
-            </div>
-
-
         </div>
     </div>
-    
-
 </main>
 {% endblock %}
 
