@@ -35,7 +35,7 @@ def gallery_page():
 @app.route('/contact')
 def contact_page():
     """Phone number, email, Facebook page, Instagram page, YouTube channel"""
-    return render_template('testing.html')
+    return render_template('contact.html')
 
 """All gallery routes below for each individual room"""
 
