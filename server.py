@@ -1,6 +1,7 @@
-from flask import Flask, render_template;
+from flask import Flask, request, render_template;
 from jinja2 import StrictUndefined;
 from model import *;
+# import smtplib;
 
 app = Flask(__name__)
 app.secret_key = "dev"
@@ -26,11 +27,6 @@ def services_page():
     """List of services and prices"""
     return render_template('services.html')
 
-# @app.route('/reviews')
-# def reviews_page():
-#     """Reviews and blurbs from previous clients"""
-#     return render_template('reviews.html')
-
 @app.route('/gallery')
 def gallery_page():
     """Images of previous work done"""
@@ -39,7 +35,7 @@ def gallery_page():
 @app.route('/contact')
 def contact_page():
     """Phone number, email, Facebook page, Instagram page, YouTube channel"""
-    return render_template('contact.html')
+    return render_template('testing.html')
 
 """All gallery routes below for each individual room"""
 
@@ -78,6 +74,25 @@ def get_gallery_template(gallery_name):
     """Show gallery of relevant button clicked """
     return render_template(f'{gallery_name}.html')
 
+# @app.route('/submit', methods=['POST'])
+# def submit_form():
+#     if request.method == 'POST':
+#         name = request.form['name']
+#         email = request.form['email']
+#         phone = request.form['phone_number']
+#         message = request.form['message']
+
+#         # Set up email sending using smtplib.
+#         try:
+#             server = smtplib.SMTP('smtp.your-email-provider.com', 587)
+#             server.starttls()
+#             server.login('your-email@example.com', 'your-email-password')
+#             email_message = f"From: {email}\nSubject: New Form Submission\nName: {name}\nEmail: {email}\nPhone: {phone}\nMessage: {message}"
+#             server.sendmail('your-email@example.com', 'bethanylynnpro@gmail.com', email_message)
+#             server.quit()
+#             return "Form submitted successfully!"
+#         except Exception as e:
+#             return f"Failed to submit the form. Error: {str(e)}"
 
 
 if __name__ == "__main__":

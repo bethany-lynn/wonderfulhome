@@ -1,220 +1,201 @@
 {% extends 'base.html' %}
 
 {% block content %}
-		<style>
-			.carousel-open:checked + .carousel-item {
-				position: static;
-				opacity: 80;
-			}
-			#carousel-1:checked ~ .control-1,
-			#carousel-2:checked ~ .control-2,
-			#carousel-3:checked ~ .control-3 {
-				display: block;
-			}
-			.carousel-indicators {
-				list-style: none;
-				margin: 0;
-				padding: 10;
-				position: absolute;
-				bottom: 2%;
-				left: 0;
-				right: 0;
-				text-align: center;
-				z-index: 10;
-			}
-			#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
-			#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
-			#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
-				color: #181c18;
-			}
-		</style>
+<style>
+  .carousel-open:checked+.carousel-item {
+    position: static;
+    opacity: 80;
+  }
 
+  #carousel-1:checked~.control-1,
+  #carousel-2:checked~.control-2,
+  #carousel-3:checked~.control-3 {
+    display: block;
+  }
 
-<div class="bg-white font-sans leading-normal tracking-normal">
+  .carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 10;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+  }
 
-<div class="carousel relative shadow-2xl bg-white p-2 border-double border-4 border-stone-700 mx-10">
-	<div class="carousel-inner relative overflow-hidden w-full">
+  #carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+  #carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+  #carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #555f55;
+  }
 
-	  <!--Slide 1-->
-		<input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
-		<div class="carousel-item absolute opacity-0" style="height:50vh;">
-			<div class="block h-full w-full bg-slate-700 text-black text-5xl text-center">1</div>
-		</div>
-		<label for="carousel-3" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl 
-      font-bold text-black hover:text-white rounded-full  leading-tight text-center z-5 
-      inset-y-0 left-0 my-auto">‹</label>
-		<label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl 
-      font-bold text-black hover:text-white rounded-full  leading-tight text-center z-5 
-      inset-y-0 right-0 my-auto">›</label>
-		
-		<!--Slide 2-->
-		<input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
-		<div class="carousel-item absolute opacity-0" style="height:50vh;">
-			<div class="block h-full w-full bg-slate-700 text-black text-5xl text-center">2</div>
-		</div>
-		<label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl 
-      font-bold text-black hover:text-white rounded-full  leading-tight text-center z-5 
-      inset-y-0 left-0 my-auto">‹</label>
-		<label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl 
-      font-bold text-black hover:text-white rounded-full  leading-tight text-center z-5 
-      inset-y-0 right-0 my-auto">›</label> 
-		
-		<!--Slide 3-->
-		<input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
-		<div class="carousel-item absolute opacity-0" style="height:50vh;">
-			<div class="block h-full w-full bg-slate-700 text-black text-5xl text-center">3</div>
-		</div>
-		<label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl 
-      font-bold text-black hover:text-white rounded-full  leading-tight text-center z-5 
-      inset-y-0 left-0 my-auto">‹</label>
-		<label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl 
-      font-bold text-black hover:text-white rounded-full  leading-tight text-center z-5 
-      inset-y-0 right-0 my-auto">›</label>
+  .font {
+    font-family: sans;
+  }
 
-		<!-- Add additional indicators for each slide-->
-		<ol class="carousel-indicators">
-			<li class="inline-block mr-3">
-				<label for="carousel-1" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-slate-700">•</label>
-			</li>
-			<li class="inline-block mr-3">
-				<label for="carousel-2" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-slate-700">•</label>
-			</li>
-			<li class="inline-block mr-3">
-				<label for="carousel-3" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-slate-700">•</label>
-			</li>
-		</ol>
-		
-	</div>
-</div>
+</style>
 
+<div class="mx-2 p-2 border-double border-4 border-stone-700" id="border">
+  <div class="relative grid grid-cols-2 gap-0 transition-opacity ease-in duration-1000 opacity-0">
+    <div class="bg-opacity-75 bg-gray-900 py-80 small-py-96">
+      <img src="https://images.unsplash.com/photo-1537205280351-cb6b54f23168?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGRvZyUyMG9uJTIwY291Y2h8ZW58MHwwfDB8fHww" 
+      class="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
+        id="contact_image">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8" id="contact_tag">
+        <div class="mx-auto max-w-2xl lg:mx-0">
+          <h2 class="font text-lg tracking-tight text-white text-center">What Happy Clients Say:</h2>
+          <p class="mt-6 text-lg leading-8">
+          <div class="review row-span-1 col-span-1">
+            <div class="carousel border-double border-4 border-stone-700">
+              <section class="relative isolate overflow-hidden px-6 lg:px-8">
+                <div class="sizes max-w-2xl lg:max-w-2xl py-4 sm:py-20">
+                  <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden=""
+                    checked="checked">
+                  <div class="carousel-item absolute opacity-0 flex justify-center items-center" style="height:5vh;">
+                    <div
+                      class="block text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
+                      <blockquote
+                        class="font text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9"
+                        id="review_words">
+                        <p>“Review ONE”</p>
+                      </blockquote>
+                      <figcaption class="mt-10" id="icon_and_name">
+                        <div class="mt-4 flex items-center justify-center space-x-3 text-base" id="client_name">
+                          <div class="font font-semibold text-white">Bee Bear</div>
+                        </div>
+                      </figcaption>
+                    </div>
+                  </div>
+                  <label for="carousel-3" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl 
+                              font-bold text-slate-400 hover:text-white rounded-full  leading-tight text-center z-5 
+                              inset-y-0 left-0 my-auto">‹</label>
+                  <label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl 
+                              font-bold text-slate-400 hover:text-white rounded-full  leading-tight text-center z-5 
+                              inset-y-0 right-0 my-auto">›</label>
 
+                  <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true"
+                    hidden="">
+                  <div class="carousel-item absolute opacity-0 flex justify-center items-center" style="height:5vh;">
+                    <div
+                      class="block text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
+                      <blockquote
+                        class="font text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9"
+                        id="review_words">
+                        <p>“Review TWO”</p>
+                      </blockquote>
+                      <figcaption class="mt-10" id="icon_and_name">
+                        <div class="mt-4 flex items-center justify-center space-x-3 text-base" id="client_name">
+                          <div class="font font-semibold text-white">Bee Bear 2</div>
+                        </div>
+                      </figcaption>
+                    </div>
+                  </div>
+                  <label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl 
+                                font-bold text-slate-400 hover:text-white rounded-full  leading-tight text-center z-5 
+                                inset-y-0 left-0 my-auto">‹</label>
+                  <label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl 
+                                font-bold text-slate-400 hover:text-white rounded-full  leading-tight text-center z-5 
+                                inset-y-0 right-0 my-auto">›</label>
+                  <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true"
+                    hidden="">
+                  <div class="carousel-item absolute opacity-0 flex justify-center items-center" style="height:5vh;">
+                    <div
+                      class="block text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
+                      <blockquote
+                        class="font text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9"
+                        id="review_words">
+                        <p>“Rewiew THREE”</p>
+                      </blockquote>
+                      <figcaption class="mt-10" id="icon_and_name">
+                        <div class="mt-4 flex items-center justify-center space-x-3 text-base" id="client_name">
+                          <div class="font font-semibold text-white">Bee Bear 3</div>
+                        </div>
+                      </figcaption>
+                    </div>
+                  </div>
+                  <label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl 
+                                font-bold text-slate-500 hover:text-white rounded-full  leading-tight text-center z-5 
+                                inset-y-0 left-0 my-auto">‹</label>
+                  <label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl 
+                                font-bold text-slate-500 hover:text-white rounded-full  leading-tight text-center z-5 
+                                inset-y-0 right-0 my-auto">›</label>
 
-
-{% endblock %}
-
-
-
-
-
-<!--   oold index.html below
-  <div class="bg-green-300 px-3 py-1">
-    <h2 class="text-3xl font-light text-white-custom m-0 custom-text">The Wonderful Home</h2>
-  </div> 
--->
-
-
-<!-- 
-
-  .carousel-item {
-  -webkit-transition: opacity 0.9s ease-out;
-  transition: opacity 0.9s ease-out;
-} 
-
-
-    Search Bar
-      <div class="container">
-    <input type="text" placeholder="Search for stuff - probably don't need this..."
-      class="border-2 ml-64 border-gray-700 w-2/5 mt-10 py-3 px-4"></input>
-    <button class="bg-blue-700 text-xl hover:bg-blue-500 text-white py-2 px-3">Search</button>
+                  <ol class="carousel-indicators">
+                    <li class="inline-block mr-3">
+                      <label for="carousel-1"
+                        class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-slate-400">•</label>
+                    </li>
+                    <li class="inline-block mr-3">
+                      <label for="carousel-2"
+                        class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-slate-400">•</label>
+                    </li>
+                    <li class="inline-block mr-3">
+                      <label for="carousel-3"
+                        class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-slate-400">•</label>
+                    </li>
+                  </ol>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-16 p-4 form mx-auto">
+      <div class="font p-8 font-cursive text-lg tracking-tight text-black text-center"> 
+        Get In Touch
+      </div>
+      <form action="submit" method="POST">
+          <div class="mb-5">
+              <label for="name" class="mb-3 block text-base font-medium black">
+                  Full Name
+              </label>
+              <input type="text" name="name" id="name" placeholder="Full Name"
+                  class="w-full md:w-96 rounded-md border border-stone-700 bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-zinc-700 focus:shadow-md" />
+          </div>
+          <div class="mb-5">
+              <label for="email" class="mb-3 block text-base font-medium black">
+                  Email Address
+              </label>
+              <input type="email" name="email" id="email" placeholder="example@email.com"
+                  required
+                  class="w-full md:w-96 rounded-md border border-stone-700 bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-zinc-700 focus:shadow-md" />
+          </div>
+          <div class="mb-5">
+              <label for="phone_number" class="mb-3 block text-base font-medium black">
+                  Phone Number
+              </label>
+              <input type="tel" name="phone_number" id="phone_number_input" placeholder="000-000-0000"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  class="w-full md:w-96 rounded-md border border-stone-700 bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-zinc-700 focus:shadow-md" />
+          </div>
+          <div class="mb-5">
+              <label for="message" class="mb-3 block text-base font-medium black">
+                  Message
+              </label>
+              <textarea rows="9" name="message" id="message" placeholder="Type your message"
+                  class="w-full md:w-96 resize-none rounded-md border border-stone-700 bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-zinc-700 focus:shadow-md"></textarea>
+          </div>
+          <div>
+              <button
+                  class="hover:shadow-form rounded-md bg-gray-700 hover:bg py-3 px-8 text-base font-semibold text-white outline-none">
+                  Submit
+              </button>
+          </div>
+      </form>
   </div>
--->
 
 
-
-<!-- 
-Selection 
-<div class="container">
-  <div class="grid gap-8 grid-cols-3 mt-5 ">
-    <div
-      class="transition duration-500 ease-in-out flex py-3 px-2 hover:bg-blue-400 transform hover:-translate-y-1 hover:scale-110 hover:text-white hover:shadow-none hover:rounded border border-gray-300 shadow-lg">
-      <img src="img/logo.jpg" class="h-16 w-12 mr-20 ml-8 mt-10" alt="Image">
-      <div class="w-3/5 mr-0">
-        <h2 class="text-gray-800 font-bold">box 1</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore et excepturi autem iure molestias doloribus
-          ipsa praesentium.</p>
-      </div>
-    </div>
-    <div
-      class="transition duration-500 ease-in-out flex py-3 px-2 hover:bg-blue-400 transform hover:-translate-y-1 hover:scale-110 hover:text-white hover:shadow-none hover:rounded border border-gray-300 shadow-lg"
-      class="transition duration-500 ease-in-out flex py-3 px-2 hover:bg-blue-400 transform hover:-translate-y-1 hover:scale-110 hover:text-white hover:shadow-none hover:rounded border border-gray-300 shadow-lg">
-      <img src="img/Asset 140.png" class="h-16 w-12 mr-20 ml-8 mt-10" alt="Image">
-      <div class="w-3/5 mr-0">
-        <h2 class="text-gray-800 font-bold">box 2</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore et excepturi autem iure molestias doloribus
-          ipsa praesentium</p>
-      </div>
-    </div>
-    <div
-      class="transition duration-500 ease-in-out flex py-3 px-2 hover:bg-blue-400 transform hover:-translate-y-1 hover:scale-110 hover:text-white hover:shadow-none hover:rounded border border-gray-300 shadow-lg"
-      class="transition duration-500 ease-in-out flex py-3 px-2 hover:bg-blue-400 transform hover:-translate-y-1 hover:scale-110 hover:text-white hover:shadow-none hover:rounded border border-gray-300 shadow-lg">
-      <img src="img/Asset 150.png" class="h-16 w-12 mr-20 ml-8 mt-10" alt="Image">
-      <div class="w-3/5 mr-0">
-        <h2 class="text-gray-800 font-bold">box 3</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore et excepturi autem iure molestias doloribus
-          ipsa praesentium.</p>
-      </div>
-    </div>
-    <div
-      class="transition duration-500 ease-in-out flex py-3 px-2 hover:bg-blue-400 transform hover:-translate-y-1 hover:scale-110 hover:text-white hover:shadow-none hover:rounded border border-gray-300 shadow-lg"
-      class="transition duration-500 ease-in-out flex py-3 px-2 hover:bg-blue-400 transform hover:-translate-y-1 hover:scale-110 hover:text-white hover:shadow-none hover:rounded border border-gray-300 shadow-lg">
-      <img src="img/Asset 160.png" class="h-16 w-12 mr-20 ml-8 mt-10" alt="Image">
-      <div class="w-3/5 mr-0">
-        <h2 class="text-gray-800 font-bold">box 4</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore et excepturi autem iure molestias doloribus
-          ipsa praesentium.</p>
-      </div>
-    </div>
-    <div
-      class="transition duration-500 ease-in-out flex py-3 px-2 hover:bg-blue-400 transform hover:-translate-y-1 hover:scale-110 hover:text-white hover:shadow-none hover:rounded border border-gray-300 shadow-lg"
-      class="transition duration-500 ease-in-out flex py-3 px-2 hover:bg-blue-400 transform hover:-translate-y-1 hover:scale-110 hover:text-white hover:shadow-none hover:rounded border border-gray-300 shadow-lg">
-      <img src="img/logo.jpg" class="h-16 w-12 mr-20 ml-8 mt-10" alt="Image">
-      <div class="w-3/5 mr-0">
-        <h2 class="text-gray-800 font-bold">box 5</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore et excepturi autem iure molestias doloribus
-          ipsa praesentium.</p>
-      </div>
-    </div>
-    <div
-      class="transition duration-500 ease-in-out flex py-3 px-2 hover:bg-blue-400 transform hover:-translate-y-1 hover:scale-110 hover:text-white hover:shadow-none hover:rounded border border-gray-300 shadow-lg"
-      class="transition duration-500 ease-in-out flex py-3 px-2 hover:bg-blue-400 transform hover:-translate-y-1 hover:scale-110 hover:text-white hover:shadow-none hover:rounded border border-gray-300 shadow-lg">
-      <img src="img/Asset 150.png" class="h-16 w-12 mr-20 ml-8 mt-10" alt="Image">
-      <div class="w-3/5 mr-0">
-        <h2 class="text-gray-800 font-bold">box 6</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore et excepturi autem iure molestias doloribus
-          ipsa praesentium</p>
-      </div>
-    </div>
-  </div>
+  <script>
+    window.addEventListener('load', function () {
+      const element = document.querySelector('.opacity-0');
+      element.classList.add('opacity-100');
+    });
+  </script>
 </div>
-
--->
-<!--
-        <div class="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
-        <a href="#">Open roles <span aria-hidden="true">&rarr;</span></a>
-        <a href="#">Internship program <span aria-hidden="true">&rarr;</span></a>
-        <a href="#">Our values <span aria-hidden="true">&rarr;</span></a>
-        <a href="#">Meet our leadership <span aria-hidden="true">&rarr;</span></a>
-      </div>
+  {% endblock %}
 
 
-          <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-      <dl class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
-        <div class="flex flex-col-reverse">
-          <dt class="text-base leading-7 text-gray-300">Offices worldwide</dt>
-          <dd class="text-2xl font-bold leading-9 tracking-tight text-white">12</dd>
-        </div>
-        <div class="flex flex-col-reverse">
-          <dt class="text-base leading-7 text-gray-300">Full-time colleagues</dt>
-          <dd class="text-2xl font-bold leading-9 tracking-tight text-white">300+</dd>
-        </div>
-        <div class="flex flex-col-reverse">
-          <dt class="text-base leading-7 text-gray-300">Hours per week</dt>
-          <dd class="text-2xl font-bold leading-9 tracking-tight text-white">40</dd>
-        </div>
-        <div class="flex flex-col-reverse">
-          <dt class="text-base leading-7 text-gray-300">Paid time off</dt>
-          <dd class="text-2xl font-bold leading-9 tracking-tight text-white">Unlimited</dd>
-        </div>
-      </dl>
-    </div>
-    -->
+

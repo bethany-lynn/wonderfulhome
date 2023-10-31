@@ -35,10 +35,10 @@
 </style>
 
 <main>
-    <div class="box flex justify-center mt-10">
-        <div class="relative grid grid-rows-3 grid-cols-2 grid-flow-col gap-7">
+    <div class="box flex flex-col justify-center items-center mt-10">
+        <div class="grid grid-rows-3 grid-cols-2 grid-flow-col gap-7 sm:flex-col">
             <div class="image mt-10 row-span-2">
-                <div class="dog-image border-double border-4 border-stone-700 w-96 h-96">
+                <div class="p-2 dog-image border-double border-4 border-stone-700 w-96 h-96">
                     <div class="relative isolate overflow-hidden px-6 lg:px-8 h-full w-full">
                         <div class="sizes max-w-2xl lg:max-w-2xl py-10 sm:py-20">
                             <img src="https://images.unsplash.com/photo-1561039188-63839a5bb5a6?auto=format&fit=crop&q=80&w=3072&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -48,7 +48,9 @@
                     </div>
                 </div>
             </div>
-            <div class="review col-span-1">
+
+
+            <div class="review row-span-1 col-span-1">
                 <div class="carousel border-double border-4 border-stone-700">
                     <section class="relative isolate overflow-hidden px-6 lg:px-8">
                         <div class="sizes max-w-2xl lg:max-w-2xl py-4 sm:py-20">
@@ -94,7 +96,6 @@
                                         <p>“Review TWO”</p>
                                     </blockquote>
                                     <figcaption class="mt-10" id="icon_and_name">
-
                                         <div class="mt-4 flex items-center justify-center space-x-3 text-base"
                                             id="client_name">
                                             <div class="font-semibold text-gray-900">Bee Bear 2</div>
@@ -152,8 +153,11 @@
                     </section>
                 </div>
             </div>
+
+
+            
             <div class="mt-8 form row-span-3 col-span-2">
-                <form action="https://formbold.com/s/FORM_ID" method="POST">
+                <form action="submit" method="POST">
                     <div class="mb-5">
                         <label for="name" class="mb-3 block text-base font-medium text-slate-800">
                             Full Name
@@ -181,7 +185,7 @@
                         <label for="message" class="mb-3 block text-base font-medium text-slate-800">
                             Message
                         </label>
-                        <textarea rows="10" name="message" id="message" placeholder="Type your message"
+                        <textarea rows="12" name="message" id="message" placeholder="Type your message"
                             class="w-full md:w-96 resize-none rounded-md border border-stone-700 bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-zinc-700 focus:shadow-md"></textarea>
                     </div>
                     <div>
