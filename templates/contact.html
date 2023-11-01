@@ -16,7 +16,7 @@
   .carousel-indicators {
     list-style: none;
     margin: 0;
-    padding: 10;
+    padding: 5;
     position: absolute;
     bottom: 2%;
     left: 0;
@@ -44,78 +44,87 @@
         class="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center" id="contact_image">
       <div class="mx-auto max-w-7xl px-6 lg:px-8" id="contact_tag">
         <div class="mx-auto max-w-2xl lg:mx-0">
-          <h2 class="font text-lg tracking-tight text-white text-center">What Happy Clients Say:</h2>
+          <!-- <h2 class="font text-lg tracking-tight text-white text-center">What Happy Clients Say:</h2> -->
           <p class="mt-6 text-lg leading-8">
           <div class="review row-span-1 col-span-1">
-            <div class="carousel border-double border-4 border-stone-700">
+            <div class="carousel bg-black bg-opacity-20 hover:bg-opacity-40 hover:shadow-lg border-4 border-stone-700">
               <section class="relative isolate overflow-hidden px-6 lg:px-8">
                 <div class="sizes max-w-2xl lg:max-w-2xl py-4 sm:py-20">
                   <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden=""
                     checked="checked">
+
+
                   <div class="carousel-item absolute opacity-0 flex justify-center items-center" style="height:5vh;">
-                    <div class="block text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
+                    <div class="block text-center text-sm font-semibold leading-6 text-white sm:text-xs sm:leading-9">
                       <blockquote
-                        class="font text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9"
-                        id="review_words">
-                        <p>“Review ONE”</p>
+                        class="font text-center text-sm font-semibold leading-6 text-white sm:text-xs sm:leading-7">
+                        <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend sagittis massa,
+                          non egestas quam eleifend vel. Proin nec varius justo. Sed rhoncus venenatis leo a congue.”</p>
                       </blockquote>
-                      <figcaption class="mt-10" id="icon_and_name">
-                        <div class="mt-4 flex items-center justify-center space-x-3 text-base" id="client_name">
+                      <figcaption class="mt-5" id="icon_and_name">
+                        <div class="mt-4 flex items-center justify-center space-x-3 text-sm" id="client_name">
                           <div class="font font-semibold text-white">Bee Bear</div>
                         </div>
                       </figcaption>
                     </div>
                   </div>
+
+
                   <label for="carousel-3" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl 
-                              font-bold text-slate-400 hover:text-white rounded-full  leading-tight text-center z-5 
+                              font-bold text-slate-400 hover:text-white rounded-full  leading-tight text-center z-10 
                               inset-y-0 left-0 my-auto">‹</label>
                   <label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl 
-                              font-bold text-slate-400 hover:text-white rounded-full  leading-tight text-center z-5 
+                              font-bold text-slate-400 hover:text-white rounded-full  leading-tight text-center z-10 
                               inset-y-0 right-0 my-auto">›</label>
-
                   <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true"
                     hidden="">
-                  <div class="carousel-item absolute opacity-0 flex justify-center items-center" style="height:5vh;">
-                    <div class="block text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
-                      <blockquote
-                        class="font text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9"
-                        id="review_words">
-                        <p>“Review TWO”</p>
-                      </blockquote>
-                      <figcaption class="mt-10" id="icon_and_name">
-                        <div class="mt-4 flex items-center justify-center space-x-3 text-base" id="client_name">
-                          <div class="font font-semibold text-white">Bee Bear 2</div>
-                        </div>
-                      </figcaption>
+
+
+                    <div class="carousel-item absolute opacity-0 flex justify-center items-center" style="height:5vh;">
+                      <div class="block text-center text-sm font-semibold leading-6 text-white sm:text-xs sm:leading-9">
+                        <blockquote
+                          class="font text-center text-sm font-semibold leading-6 text-white sm:text-xs sm:leading-7">
+                          <p>“Sed id erat sit amet odio consequat bibendum id at libero. Sed sit amet orci sed urna congue”</p>
+                        </blockquote>
+                        <figcaption class="mt-5" id="icon_and_name">
+                          <div class="mt-4 flex items-center justify-center space-x-3 text-sm" id="client_name">
+                            <div class="font font-semibold text-white">Bee Bear</div>
+                          </div>
+                        </figcaption>
+                      </div>
                     </div>
-                  </div>
+
+
                   <label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl 
-                                font-bold text-slate-400 hover:text-white rounded-full  leading-tight text-center z-5 
+                                font-bold text-slate-400 hover:text-white rounded-full  leading-tight text-center z-10 
                                 inset-y-0 left-0 my-auto">‹</label>
                   <label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl 
-                                font-bold text-slate-400 hover:text-white rounded-full  leading-tight text-center z-5 
+                                font-bold text-slate-400 hover:text-white rounded-full  leading-tight text-center z-10 
                                 inset-y-0 right-0 my-auto">›</label>
                   <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true"
                     hidden="">
-                  <div class="carousel-item absolute opacity-0 flex justify-center items-center" style="height:5vh;">
-                    <div class="block text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
-                      <blockquote
-                        class="font text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9"
-                        id="review_words">
-                        <p>“Rewiew THREE”</p>
-                      </blockquote>
-                      <figcaption class="mt-10" id="icon_and_name">
-                        <div class="mt-4 flex items-center justify-center space-x-3 text-base" id="client_name">
-                          <div class="font font-semibold text-white">Bee Bear 3</div>
-                        </div>
-                      </figcaption>
+
+
+                    <div class="carousel-item absolute opacity-0 flex justify-center items-center" style="height:5vh;">
+                      <div class="block text-center text-sm font-semibold leading-6 text-white sm:text-xs sm:leading-9">
+                        <blockquote
+                          class="font text-center text-sm font-semibold leading-6 text-white sm:text-xs sm:leading-7">
+                          <p>“Morbi id scelerisque sapien. Nullam feugiat aliquet sapien, nec tristique ipsum vestibulum non.”</p>
+                        </blockquote>
+                        <figcaption class="mt-5" id="icon_and_name">
+                          <div class="mt-4 flex items-center justify-center space-x-3 text-sm" id="client_name">
+                            <div class="font font-semibold text-white">Bee Bear</div>
+                          </div>
+                        </figcaption>
+                      </div>
                     </div>
-                  </div>
+
+
                   <label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl 
-                                font-bold text-slate-500 hover:text-white rounded-full  leading-tight text-center z-5 
+                                font-bold text-slate-500 hover:text-white rounded-full  leading-tight text-center z-10 
                                 inset-y-0 left-0 my-auto">‹</label>
                   <label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl 
-                                font-bold text-slate-500 hover:text-white rounded-full  leading-tight text-center z-5 
+                                font-bold text-slate-500 hover:text-white rounded-full  leading-tight text-center z-10 
                                 inset-y-0 right-0 my-auto">›</label>
 
                   <ol class="carousel-indicators">
