@@ -32,5 +32,5 @@ This will execute the script, perform data processing, and generate a CSV file n
 
 ## Additional Information
 
-The script interacts with SQLite databases and external APIs to fetch and process data.
+The script interacts with SQLite databases and external APIs to fetch and process data. </br>
 Check the script for additional customization options and configuration settings. 
