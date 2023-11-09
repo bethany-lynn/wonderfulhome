@@ -17,14 +17,17 @@ This Python script performs Extract, Transform, and Load (ETL) operations on dat
 1. **Clone the Repository:**
 
     `bash`
-   git clone https://github.com/HeyRenew/bethany-winter-solutions-engineer.git
    </br>
-   cd renew-data-etl
+   - git clone https://github.com/HeyRenew/bethany-winter-solutions-engineer.git
+   </br>
+   - cd renew-data-etl
 
 
 3. **Run the Script:**
 
-"python3 renew_data_etl.py"
+    `bash`
+   </br>
+   - python3 renew_data_etl.py
 
 This will execute the script, perform data processing, and generate a CSV file named properties.csv.
 
