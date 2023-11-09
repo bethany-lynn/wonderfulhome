@@ -19,7 +19,6 @@ This Python script performs Extract, Transform, and Load (ETL) operations on dat
     `bash`
    </br>
    - git clone https://github.com/HeyRenew/bethany-winter-solutions-engineer.git
-   </br>
    - cd renew-data-etl
 
 
