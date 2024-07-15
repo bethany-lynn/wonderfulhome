@@ -82,17 +82,17 @@ def get_gallery_template(gallery_name):
 #         phone = request.form['phone_number']
 #         message = request.form['message']
 
-#         # Set up email sending using smtplib.
-#         try:
-#             server = smtplib.SMTP('smtp.your-email-provider.com', 587)
-#             server.starttls()
-#             server.login('your-email@example.com', 'your-email-password')
-#             email_message = f"From: {email}\nSubject: New Form Submission\nName: {name}\nEmail: {email}\nPhone: {phone}\nMessage: {message}"
-#             server.sendmail('your-email@example.com', 'bethanylynnpro@gmail.com', email_message)
-#             server.quit()
-#             return "Form submitted successfully!"
-#         except Exception as e:
-#             return f"Failed to submit the form. Error: {str(e)}"
+        # Set up email sending using smtplib.
+        # try:
+        #     server = smtplib.SMTP('smtp.your-email-provider.com', 587)
+        #     server.starttls()
+        #     server.login('your-email@example.com', 'your-email-password')
+        #     email_message = f"From: {email}\nSubject: New Form Submission\nName: {name}\nEmail: {email}\nPhone: {phone}\nMessage: {message}"
+        #     server.sendmail('your-email@example.com', 'bethanylynnpro@gmail.com', email_message)
+        #     server.quit()
+        #     return "Form submitted successfully!"
+        # except Exception as e:
+        #     return f"Failed to submit the form. Error: {str(e)}"
 
 
 if __name__ == "__main__":
